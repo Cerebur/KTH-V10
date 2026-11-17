@@ -1,7 +1,38 @@
 [project]
 name = "kth"
-version = "0.1.0"
-description = "Add your description here"
+version = "10.1"
+description = "Originally developed by Korth, Heyner, and Pump, I am restructuring this project while learning how it works"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "ipython>=8.39.0",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.9",
+    "mpmath>=1.4.1",
+    "numba>=0.68.1",
+    "numpy>=2.2.6",
+    "pandas>=2.3.3",
+    "scipy>=1.15.3",
+]
+
+[tool.pyright]
+pythonVersion = "3.10"
+venvPath = "."
+venv = ".venv"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "D",
+]
+ignore = ["E501"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
